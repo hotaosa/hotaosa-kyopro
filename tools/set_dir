@@ -1,0 +1,25 @@
+#!/bin/bash
+
+END_DIR="G"
+if [ $# -ge 1 ]; then
+  END_DIR="$1"
+fi
+
+if [[ ! "$END_DIR" =~ ^[A-Z]$ ]]; then
+  echo "invalid argument"
+  exit 1
+fi
+
+BEFORE_DIR=$(pwd)
+TOOLS_DIR=$(cd "$(dirname "$0")" && pwd)
+cd "$TOOLS_DIR/../contest"
+rm -r [A-Z] &>/dev/null
+
+for DIR in {A..Z}; do
+  if [[ "$DIR" > $END_DIR ]]; then
+    break
+  fi
+  cp -r ../template ./$DIR
+done
+
+cd $BEFORE_DIR

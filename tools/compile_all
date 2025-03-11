@@ -1,0 +1,14 @@
+#!/bin/bash
+
+BEFORE_DIR=$(pwd)
+TOOLS_DIR=$(cd "$(dirname "$0")" && pwd)
+cd "$TOOLS_DIR/../contest"
+
+for DIR in {A..Z}; do
+  if [ ! -d "$DIR" ]; then
+    break
+  fi
+  cd $DIR && ./compile && cd ..
+done
+
+cd $BEFORE_DIR
