@@ -1,0 +1,11 @@
+[[languages.cpp.environments]]
+CXX = "g++"
+CXXFLAGS = [
+  "-std=c++23",
+  "-O3",
+  "-Wall",
+  "-g",
+  "-fsanitize=undefined",
+  "-D_GLIBCXX_DEBUG",
+  "-Iinclude/",
+]
