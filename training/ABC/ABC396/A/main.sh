@@ -1,0 +1,1 @@
+grep -Pq '(\d+)\s\1\s\1' && echo "Yes" || echo "No"
