@@ -5,8 +5,8 @@ if [ ! $# -ge 1 ]; then
  exit 1
 fi
 
-BEFORE_DIR=$(pwd)
-TOOLS_DIR=$(cd "$(dirname "$0")" && pwd)
+pushd .>/dev/null
+TOOLS_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$TOOLS_DIR/../contest"
 
 for DIR in {A..Z}; do
@@ -16,4 +16,4 @@ for DIR in {A..Z}; do
   cd $DIR && oj d "${1}_${DIR,,}" && cd ..
 done
 
-cd $BEFORE_DIR
+popd >/dev/null

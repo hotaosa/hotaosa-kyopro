@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -e
 END_DIR="G"
 if [ $# -ge 1 ]; then
   END_DIR="$1"
@@ -10,16 +10,22 @@ if [[ ! "$END_DIR" =~ ^[A-Z]$ ]]; then
   exit 1
 fi
 
-BEFORE_DIR=$(pwd)
-TOOLS_DIR=$(cd "$(dirname "$0")" && pwd)
-cd "$TOOLS_DIR/../contest"
-rm -r [A-Z] &>/dev/null
+pushd .>/dev/null
+CONTEST_DIR="$(dirname "$(dirname "$(realpath "$0")")")/contest"
+mkdir -p "$CONTEST_DIR"
+cd "$CONTEST_DIR"
+rm -rf [A-Z] &>/dev/null
 
+cp -r ../template/third_party ./
+cp ../template/MODULE.bazel ./
 for DIR in {A..Z}; do
-  if [[ "$DIR" > $END_DIR ]]; then
+  if [[ "$DIR" > "$END_DIR" ]]; then
     break
   fi
-  cp -r ../template ./$DIR
+  cp -rT ../template/problem "$DIR"
+  sed "s/PDIR/$DIR/g" ../template/problem/compile >$DIR/compile
 done
 
-cd $BEFORE_DIR
+bazel clean
+bazel fetch //...
+popd >/dev/null

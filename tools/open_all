@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BEFORE_DIR=$(pwd)
+pushd .>/dev/null
 TOOLS_DIR=$(cd "$(dirname "$0")" && pwd)
 cd "$TOOLS_DIR/../contest"
 
@@ -12,4 +12,4 @@ for DIR in {A..Z}; do
   code "$DIR/main.py"
 done
 
-cd $BEFORE_DIR
+popd >/dev/null
