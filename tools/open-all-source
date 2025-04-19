@@ -8,7 +8,7 @@ for DIR in {A..Z}; do
   if [ ! -d "$DIR" ]; then
     break
   fi
-  code "$DIR/main.*"
+  code "$DIR/main.cc"
 done
 
 popd >/dev/null
