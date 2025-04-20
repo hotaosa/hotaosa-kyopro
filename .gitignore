@@ -2,4 +2,5 @@
 .vscode/
 contest/
 bazel-*
+compile_commands.json
 MODULE.bazel.lock

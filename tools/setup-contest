@@ -30,4 +30,5 @@ done
 cd "$PROJECT_DIR"
 bazel clean
 bazel fetch //...
+bazel build //hotaosa
 popd >/dev/null

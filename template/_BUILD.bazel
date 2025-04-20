@@ -4,10 +4,7 @@ cc_binary(
     name = "solve",
     srcs = ["main.cc"],
     deps = [
-        "//hotaosa/datastructure",
-        "//hotaosa/graph",
-        "//hotaosa/math",
-        "//hotaosa/string",
+        "//hotaosa",
         "@ac-library//:aclib",
         "@eigen",
     ],
