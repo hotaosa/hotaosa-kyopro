@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_UTIL_UPDATE_MIN_MAX_H_
-#define HOTAOSA_UTIL_UPDATE_MIN_MAX_H_
+#ifndef HOTAOSA_UPDATE_MIN_MAX_H_
+#define HOTAOSA_UPDATE_MIN_MAX_H_
 
 #include <concepts>
 
@@ -25,4 +25,4 @@ bool UpdateMax(T a, T *b) {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_UTIL_UPDATE_MIN_MAX_H_
+#endif  // HOTAOSA_UPDATE_MIN_MAX_H_

@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_DATASTRUCTURE_CONVEX_HULL_TRICK_H_
-#define HOTAOSA_DATASTRUCTURE_CONVEX_HULL_TRICK_H_
+#ifndef HOTAOSA_CONVEX_HULL_TRICK_H_
+#define HOTAOSA_CONVEX_HULL_TRICK_H_
 
 #include <cassert>
 #include <concepts>
@@ -116,4 +116,4 @@ class ConvexHullTrick {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_DATASTRUCTURE_CONVEX_HULL_TRICK_H_n
+#endif  // HOTAOSA_CONVEX_HULL_TRICK_H_n

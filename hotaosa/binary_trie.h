@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_DATASTRUCTURE_BINARY_TRIE_H_
-#define HOTAOSA_DATASTRUCTURE_BINARY_TRIE_H_
+#ifndef HOTAOSA_BINARY_TRIE_H_
+#define HOTAOSA_BINARY_TRIE_H_
 
 #include <array>
 #include <cassert>
@@ -145,4 +145,4 @@ class BinaryTrie {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_DATASTRUCTURE_BINARY_TRIE_H_
+#endif  // HOTAOSA_BINARY_TRIE_H_

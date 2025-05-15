@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_GRAPH_GRAPH_H_
-#define HOTAOSA_GRAPH_GRAPH_H_
+#ifndef HOTAOSA_GRAPH_H_
+#define HOTAOSA_GRAPH_H_
 
 #include <algorithm>
 #include <cassert>
@@ -9,9 +9,9 @@
 #include <queue>
 #include <vector>
 
-#include "hotaosa/graph/union_find.h"
-#include "hotaosa/util/arighmetic.h"
-#include "hotaosa/util/update_min_max.h"
+#include "hotaosa/arighmetic.h"
+#include "hotaosa/union_find.h"
+#include "hotaosa/update_min_max.h"
 
 namespace hotaosa {
 
@@ -178,4 +178,4 @@ class Graph {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_GRAPH_GRAPH_H_
+#endif  // HOTAOSA_GRAPH_H_

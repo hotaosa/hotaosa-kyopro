@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_STRINGS_TRIE_H_
-#define HOTAOSA_STRINGS_TRIE_H_
+#ifndef HOTAOSA_TRIE_H_
+#define HOTAOSA_TRIE_H_
 
 #include <array>
 #include <memory>
@@ -78,4 +78,4 @@ class Trie {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_STRINGS_TRIE_H_
+#endif  // HOTAOSA_TRIE_H_

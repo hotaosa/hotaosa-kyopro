@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_STRINGS_RUN_LENGTH_ENCODE_H_
-#define HOTAOSA_STRINGS_RUN_LENGTH_ENCODE_H_
+#ifndef HOTAOSA_RUN_LENGTH_ENCODE_H_
+#define HOTAOSA_RUN_LENGTH_ENCODE_H_
 
 #include <ranges>
 #include <utility>
@@ -39,4 +39,4 @@ auto RunLengthEncode(const Range &range) {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_STRINGS_RUN_LENGTH_ENCODE_H_
+#endif  // HOTAOSA_RUN_LENGTH_ENCODE_H_

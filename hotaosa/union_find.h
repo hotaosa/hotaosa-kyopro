@@ -1,11 +1,11 @@
-#ifndef HOTAOSA_GRAPH_UNION_FIND_H_
-#define HOTAOSA_GRAPH_UNION_FIND_H_
+#ifndef HOTAOSA_UNION_FIND_H_
+#define HOTAOSA_UNION_FIND_H_
 
 #include <cassert>
 #include <utility>
 #include <vector>
 
-#include "hotaosa/util/arighmetic.h"
+#include "hotaosa/arighmetic.h"
 
 namespace hotaosa {
 
@@ -129,4 +129,4 @@ class PotentialUnionFind {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_GRAPH_UNION_FIND_H_
+#endif  // HOTAOSA_UNION_FIND_H_

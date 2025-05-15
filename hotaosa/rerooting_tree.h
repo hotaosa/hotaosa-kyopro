@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_GRAPH_REROOTING_TREE_H_
-#define HOTAOSA_GRAPH_REROOTING_TREE_H_
+#ifndef HOTAOSA_REROOTING_TREE_H_
+#define HOTAOSA_REROOTING_TREE_H_
 
 #include <functional>
 #include <ranges>
@@ -80,4 +80,4 @@ class RerootingTree {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_GRAPH_REROOTING_TREE_H_
+#endif  // HOTAOSA_REROOTING_TREE_H_

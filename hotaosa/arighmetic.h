@@ -1,5 +1,5 @@
-#ifndef HOTAOSA_UTIL_ARITHMETIC_H_
-#define HOTAOSA_UTIL_ARITHMETIC_H_
+#ifndef HOTAOSA_ARITHMETIC_H_
+#define HOTAOSA_ARITHMETIC_H_
 
 #include <concepts>
 
@@ -20,4 +20,4 @@ constexpr T SafeInf() {
 
 }  // namespace hotaosa
 
-#endif  // HOTAOSA_UTIL_ARITHMETIC_H_
+#endif  // HOTAOSA_ARITHMETIC_H_
