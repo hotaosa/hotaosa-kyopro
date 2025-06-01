@@ -7,6 +7,8 @@
 #include <deque>
 #include <numeric>
 #include <queue>
+#include <stack>
+#include <tuple>
 #include <vector>
 
 #include "hotaosa/arighmetic.h"
@@ -109,7 +111,7 @@ class Graph {
     std::vector<T> dist(n_, kInf);
     dist[s] = 0;
 
-    std::queue<int> que{s};
+    std::queue<int> que({s});
 
     while (!que.empty()) {
       const int v = que.front();
@@ -168,6 +170,29 @@ class Graph {
       }
     }
     return total_weight;
+  }
+
+  void DfsOrder(int root, std::vector<int> *in, std::vector<int> *out) const {
+    in->assign(n_, -1);
+    if (out) out->assign(n_, -1);
+    std::vector<bool> visited(n_, false);
+    visited[root] = true;
+    int count = 0;
+    std::stack<std::tuple<int, int, size_t>> st;
+    st.emplace(root, -1, 0);
+    while (!st.empty()) {
+      auto &[v, p, idx] = st.top();
+      if (idx == 0) (*in)[v] = count++;
+      if (idx < g_[v].size()) {
+        int u = g_[v][idx++].to;
+        if (u == p || visited[u]) continue;
+        visited[u] = true;
+        st.emplace(u, v, 0);
+      } else {
+        if (out) (*out)[v] = count;
+        st.pop();
+      }
+    }
   }
 
  private:
