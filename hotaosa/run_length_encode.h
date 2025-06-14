@@ -8,22 +8,22 @@
 namespace hotaosa {
 
 template <std::input_iterator It, std::sentinel_for<It> Sent>
-std::vector<std::pair<std::iter_value_t<It>, int>> RunLengthEncode(It begin,
+std::vector<std::pair<std::iter_value_t<It>, int>> RunLengthEncode(It start,
                                                                    Sent end) {
   using T = std::iter_value_t<It>;
   std::vector<std::pair<T, int>> res;
 
-  if (begin == end) return res;
+  if (start == end) return res;
 
-  T current = *begin;
+  T current = *start;
   int count = 1;
 
-  for (++begin; begin != end; ++begin) {
-    if (*begin == current) {
+  for (++start; start != end; ++start) {
+    if (*start == current) {
       ++count;
     } else {
       res.emplace_back(current, count);
-      current = *begin;
+      current = *start;
       count = 1;
     }
   }
@@ -33,8 +33,8 @@ std::vector<std::pair<std::iter_value_t<It>, int>> RunLengthEncode(It begin,
 }
 
 template <std::ranges::input_range Range>
-auto RunLengthEncode(const Range &range) {
-  return RunLengthEncode(std::ranges::begin(range), std::ranges::end(range));
+auto RunLengthEncode(const Range &r) {
+  return RunLengthEncode(std::ranges::begin(r), std::ranges::end(r));
 }
 
 }  // namespace hotaosa
